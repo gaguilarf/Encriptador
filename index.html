@@ -6,47 +6,49 @@
         <title>Encriptador de Texto</title>
         <link rel="icon" type="icon/png" href="Assets/icon.ico">
         <link rel="stylesheet" href="styles/style.css">
-        <script src="encriptar.js"></script>
     </head>
     <body>
-        <header class="cabecera">
-            <img class="LogoImg" src="Assets/logo.png" alt="Logo">
-        </header>
         <main class="contenido" >
-
-            <section class="seccion1">
-                <textarea id="areaPrincipal" class="area" placeholder="Ingrese el texto aquí"></textarea>
-                <div class="contenedor_botones">
-                    <div class="contenedor_botones_advertencia">
-                        <img src="Assets/Group.png" alt="Icono de candado" class="icono">
-                        <p>Solo letras minúsculas y sin acentos.</p>
+            <div class="contenido_titulo">
+                <img class="LogoImg" src="Assets/logo.png" alt="Logo">
+            </div>
+            <div class="contenido_principal">
+                <section class="seccion1">
+                    <textarea id="texto_encriptar" class="area" placeholder="Ingrese el texto aquí"></textarea>
+                    <div class="contenedor_botones">
+                        <div class="contenedor_botones_advertencia">
+                            <img src="Assets/Group.png" alt="Icono de candado" class="icono">
+                            <p>Solo letras minúsculas y sin acentos.</p>
+                        </div>
+                        <div class="contenedor_boton">
+                            <input type="button" id="btn_encriptar" class="btn-encriptar" value="Encriptar">
+                            <input type="button" id="btn_desencriptar" class="btn-desencriptar" value="Desencriptar">
+                            <input type="button" id="btn_limpiar" value="Limpiar">
+                        </div>
                     </div>
-                    <input type="button" class="btn-encriptar" value="Encriptar">
-                    <input type="button" class="btn-desencriptar" value="Desencriptar">
-                    <input type="button" id="limpiar" value="Limpiar">
-                </div>
-            </section>
-
-            <section class="seccion2">
-                <div class="contenedor_muneco ">
-                    <img class="muneco"src="Assets/Muñeco.png" alt="Muñeco de alura">
-                </div>
-                <div class="contenedor-parrafo">    
-                    <h3 class="contenedor-h3">Ningún mensaje fue encontrado </h3>
-                </div>
-                 <div class="contenedor-resultado">
-                    <textarea id ="resultado-final" placeholder="Texto encriptado o desencriptado"></textarea>    
-                </div>
-                <div class="contenedor-copiar ">
-                    <input type="button" id="btn-copiar" value="Copiar">
-                </div>
-            </section>
-
+                </section>
+    
+                <section class="seccion2">
+                    <div class="contenedor_muneco ">
+                        <img id="cubierta" class="muneco"src="Assets/Muñeco.png" alt="Muñeco de alura">
+                    </div>
+                    <div  class="contenedor-parrafo">    
+                        <h3 id="mensaje_cubierta" class="contenedor-h3">Ningún mensaje fue encontrado </h3>
+                        <textarea id ="texto_desencriptar" class="area2" placeholder="Ingresa el texto que desees encriptar o desencriptar." readonly></textarea> 
+                    </div>
+                    <div class="contenedor-copiar">
+                        <input type="button" id="btn_copiar" value="Copiar">
+                    </div>
+                </section>
+            </div>
         </main>
         
         <footer>
             © 2024 Gustavo Aguilar. Todos los derechos reservados.
         </footer>
+
+        <script src="js/encriptar.js"></script>
+
     </body>
 </html>
 

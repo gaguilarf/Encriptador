@@ -5,7 +5,6 @@
     --color-secundario: #0A3871;
     --color-terciario: #96b3ff;
     --color-hover: #272727;
-
     --fuente-inter: 'Inter', sans-serif;
 }
 
@@ -14,53 +13,61 @@
     padding: 0;
 }
 
-body{
+body {
     background: var(--color-primario);
     font-family: var(--fuente-inter);
-}
-
-.cabecera {
-    padding: 2.5rem;
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 .contenido {
+    padding: 0 2.5rem;
+    display: flex;
+}
+
+.contenido_titulo {
+    padding: 2.5rem;
+}
+
+.contenido_principal {
+    padding-top: 2.5rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
-.seccion1{
-    width: 75%;
-    padding: 0 0 0 4rem;
+.seccion1 {
+    padding-top: 2.5rem;
+    width: 60%;
+    height: 70vh;
 }
 
-.area{
-    width: 80%;
-    height: 100%;
-    display: block;
+.area {
+    width: 100%;
+    height: 90%;
     margin: auto;
     margin-top: 20px;
     resize: none;
     border: none;
     outline: none;
-    font-size: 2rem;
+    font-size: 1.9rem;
+    text-align: left;
     color: var(--color-secundario);
     background: var(--color-primario);
 }
 
-p{
- font-size: 20px;
- padding: 1px;
+p {
+    font-size: 0.75rem;
 }
 
-.contenedor_botones{
-   width: 85%;
-   margin-left: 10%;
+.seccion1 .contenedor_botones {
+    padding-bottom: 1rem;
 }
 
 .contenedor_botones_advertencia {
     display: flex;
     align-items: center;
+    padding: 1rem;
     gap: 5px;
 }
 
@@ -69,25 +76,26 @@ p{
     height: 2%;
 }
 
-.btn-encriptar{
+.btn-encriptar {
     background-color: #2c578d;
     color: #E5E5E5;
 }
 
-.btn-desencriptar{
+.btn-desencriptar {
     background-color: #99a7ba;
     color: black;
     margin-left: 3%;
 }
 
-.btn-encriptar, .btn-desencriptar{
-   width: 30%;
-   height: 2.5rem;
-   font-size: 1.25rem;
-   border-radius: 0.7rem;
+.btn-encriptar,
+.btn-desencriptar {
+    width: 30%;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.7rem;
 }
 
-#limpiar{
+#btn_limpiar {
     width: 30%;
     height: 2.5rem;
     background: #bec6d2;
@@ -96,26 +104,31 @@ p{
     margin-left: 3%;
 }
 
-.seccion2{
-    width: 25%;
+.seccion2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+    width: 30%;
     border-radius: 20px;
-    box-sizing: border-box;
     text-align: center;
+    height: 84vh;
     background-color: rgb(244, 237, 237);
+    padding: 0 2rem 0 2rem;
+    gap: 1rem; /* Añade espacio entre los elementos */
 }
 
-.muneco{
-    width: 70%;
-    height: 100%;
-}
-
-.contenedor-muneco{
+.contenedor-muneco {
     width: 100%;
     height: 60%;
     overflow: hidden;
 }
 
-h3{
+.muneco {
+    width: 80%;
+    padding: 2rem;
+}
+
+h3 {
     width: 60%;
     font-size: 20px;
     margin-top: 5%;
@@ -123,34 +136,37 @@ h3{
     text-align: center;
 }
 
-#resultado-final{
+#texto_desencriptar {
     margin-top: 3%;
+    text-align: center;
+    font-size: 0.9rem;
     width: 90%;
-    height: 90%;
+    height: auto;
     resize: none;
     border: none;
     outline: none;
-    font-size: 18px;
     color: var(--color-secundario);
     padding: 10px;
     background-color: rgb(244, 237, 237);
+    align-self: flex-start; /* Alinea el textarea al inicio */
 }
 
-.contenedor-copiar{
-    width: 75%;
-    height: 25%;
+.seccion2 .contenedor-copiar {
+    padding-bottom: 1rem;
+    margin-top: auto; /* Empuja el contenedor hacia el fondo */
 }
 
-#btn-copiar{
-    width: 60%;
+#btn_copiar {
+    width: 30%; /* Ajusta el ancho del botón */
     height: 2.5rem;
     background: #bec6d2;
     border-radius: 0.7rem;
     font-size: 1.3rem;
-
+    display: block; /* Asegura que se muestre */
+    margin: 0 auto; /* Centra el botón horizontalmente */
 }
 
-.ocultar{
+.ocultar {
     display: none;
 }
 
@@ -160,74 +176,64 @@ footer {
     padding: 1.5rem;
 }
 
-@media screen and (max-width:780px) {
-    .principal {
-        width: 100%;
-        display:block;
-        float: left;
-    }
-    .LogoImg{
-        width: 20px;
-    }
-    .contenido, .seccion1, .seccion2 {
-        width: 100%;
-        height: 80%;
-        display:block;
-   } 
-    .area {
-        width: 100%;
-        height: 70%;
-        padding: 10%;
-        font-size: 20px;
-        color: #0A3871;
-    }
-   .contenedor-botones {
-        width: 100%;
-        height: 70%;
-        margin-left: 2%;
-    }
-    p {
-        font-size: 15px;
+@media (max-width: 1000px) {
+    .contenido,
+    .contenido_principal {
+        flex-direction: column;
     }
 
-    .btn-encriptar, .btn-desencriptar, #limpiar {
-        width: 25%;
-        height: 8%;
-        font-size: 15px; 
-        border-radius: 15px;   
-        text-align: center;  
-        margin-left: 1%;
-        
+    .contenido_titulo {
+        padding: 2.5rem 0;
     }
-   .seccion2 {
-        margin-top: 0%; 
-        border-radius: 1px;
-        height: 70%;
-  
-   }
-   .contenedor-resultado {
-        height: 90%;
-        font-size: 25px;
-        color: #0A3871;
-   }
-   .contenedor-muneco {
+
+    .contenido_principal {
+        padding-top: 0;
+        align-items: center;
+    }
+
+    .contenedor_muneco {
         display: none;
-   }
-   .contenedor-h3 {
-        padding-top: 1%;
-   }  
-
-    #btn-copiar{
-        width: 20%;
-        height: 25px;
-        display: block;
-        font-size: 15px; 
     }
-     .pie-pagina {
-        font-size: 15px;
-        padding-top: 0%;
-        padding-top: 50%;
-        width: 70%;
-        margin-left: 6%;
-     }
+
+    .seccion1 {
+        height: 30vh;
+    }
+
+    .seccion1,
+    .seccion2 {
+        width: 80%;
+    }
+
+    .seccion2 {
+        margin-top: 4rem;
+        height: 20vh;
+    }
+
+    #texto_desencriptar {
+        height: 20%;
+    }
+}
+
+@media (max-width: 700px) {
+    .seccion1,
+    .seccion2 {
+        width: 80%;
+    }
+
+    .contenedor_boton {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar,
+    #btn_limpiar {
+        width: 100%;
+        margin: 0.5rem 0; /* Añade espacio vertical entre los botones */
+        font-size: 1rem; /* Ajusta el tamaño de fuente si es necesario */
+    }
+
+    .seccion2 {
+        margin-top: 12rem;
+    }
 }
