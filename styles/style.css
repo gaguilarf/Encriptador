@@ -107,14 +107,14 @@ p {
 .seccion2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+    justify-content: space-between;
     width: 30%;
     border-radius: 20px;
     text-align: center;
     height: 84vh;
     background-color: rgb(244, 237, 237);
     padding: 0 2rem 0 2rem;
-    gap: 1rem; /* Añade espacio entre los elementos */
+    gap: 1rem;
 }
 
 .contenedor-muneco {
@@ -148,22 +148,22 @@ h3 {
     color: var(--color-secundario);
     padding: 10px;
     background-color: rgb(244, 237, 237);
-    align-self: flex-start; /* Alinea el textarea al inicio */
+    align-self: flex-start; 
 }
 
 .seccion2 .contenedor-copiar {
     padding-bottom: 1rem;
-    margin-top: auto; /* Empuja el contenedor hacia el fondo */
+    margin-top: auto; 
 }
 
 #btn_copiar {
-    width: 30%; /* Ajusta el ancho del botón */
+    width: 30%;
     height: 2.5rem;
     background: #bec6d2;
     border-radius: 0.7rem;
     font-size: 1.3rem;
-    display: block; /* Asegura que se muestre */
-    margin: 0 auto; /* Centra el botón horizontalmente */
+    display: block; 
+    margin: 0 auto;
 }
 
 .ocultar {
@@ -229,8 +229,8 @@ footer {
     .btn-desencriptar,
     #btn_limpiar {
         width: 100%;
-        margin: 0.5rem 0; /* Añade espacio vertical entre los botones */
-        font-size: 1rem; /* Ajusta el tamaño de fuente si es necesario */
+        margin: 0.5rem 0;
+        font-size: 1rem;
     }
 
     .seccion2 {
